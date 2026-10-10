@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrshiVision | AI-Powered Farm-to-Market Price Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F8F7F0] text-[#17221D] font-['Inter']">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold font-['Space_Grotesk'] text-[#12372A]">Krshi<span class="text-[#1E9B63]">Vision</span></div>
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
+                <a href="#home" class="hover:text-[#1E9B63] transition">Home</a>
+                <a href="#problem" class="hover:text-[#1E9B63] transition">Problem</a>
+                <a href="#solution" class="hover:text-[#1E9B63] transition">Solution</a>
+                <a href="#demo" class="hover:text-[#1E9B63] transition">Live Demo</a>
+                <a href="#technology" class="hover:text-[#1E9B63] transition">Technology</a>
+                <a href="#team" class="hover:text-[#1E9B63] transition">Team</a>
+            </div>
+            <a href="#demo" class="bg-[#12372A] text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-[#1E9B63] transition">Explore Demo</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#12372A]">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=2000" alt="Farmland" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span class="inline-block px-4 py-1 rounded-full bg-[#C8F169]/20 text-[#C8F169] text-xs font-bold tracking-widest uppercase mb-6">Smart India Hackathon · AgriTech Intelligence</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-white font-['Space_Grotesk'] leading-tight mb-6">
+                    Every Harvest Deserves a <span class="text-[#C8F169]">Smarter Price.</span>
+                </h1>
+                <p class="text-xl text-sage-100/80 text-[#E3EDE3] mb-8 max-w-lg">
+                    Transform crop prices, nearby mandi data, and AI-powered forecasts into one clear selling decision. Know when to sell, wait, or negotiate.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#demo" class="bg-[#C8F169] text-[#12372A] px-8 py-4 rounded-xl font-bold text-center hover:scale-105 transition transform">Explore the Intelligence</a>
+                    <a href="#solution" class="border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-white/10 transition">See How It Works</a>
+                </div>
+            </div>
+            
+            <!-- Hero Dashboard Mockup -->
+            <div class="relative">
+                <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl shadow-2xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-[#C8F169] rounded-lg flex items-center justify-center">🍅</div>
+                            <div>
+                                <h3 class="text-white font-bold">Tomatoes</h3>
+                                <p class="text-white/50 text-xs">Analysis for Kolar, KA</p>
+                            </div>
+                        </div>
+                        <div class="px-3 py-1 bg-[#1E9B63] text-white text-[10px] font-bold rounded-full uppercase tracking-tighter">Live Insight</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                            <p class="text-white/50 text-xs mb-1">Market Price</p>
+                            <p class="text-white text-xl font-bold">₹1,800/q</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                            <p class="text-white/50 text-xs mb-1">Forecast</p>
+                            <p class="text-[#C8F169] text-xl font-bold">+12.5% ↑</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#C8F169] p-4 rounded-2xl text-[#12372A] flex justify-between items-center">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase opacity-60">Recommendation</p>
+                            <p class="text-lg font-black italic">WAIT TO SELL</p>
+                        </div>
+                        <div class="text-2xl">⏳</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-6">Farmers Don't Just Need Prices.<br><span class="text-[#1E9B63]">They Need Answers.</span></h2>
+                <p class="text-[#17221D]/60 max-w-2xl mx-auto text-lg">Information asymmetry leaves farmers vulnerable. Raw mandi rates don't account for the true cost of getting produce to market.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 font-bold">!</div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2 text-red-900">Fragmentation</h4>
+                            <p class="text-[#17221D]/70">Prices vary by ₹5–8/kg between nearby mandis, yet 40% of small farmers rely on informal word-of-mouth.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 font-bold">!</div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2 text-red-900">Distress Sales</h4>
+                            <p class="text-[#17221D]/70">1 in 3 farmers are forced into distress sales due to lack of timely price information and spoilage fear.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 font-bold">!</div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2 text-red-900">Hidden Costs</h4>
+                            <p class="text-[#17221D]/70">Transport, mandi fees, and handling losses often eat up the margin gained from a higher market price.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#F8F7F0] p-8 rounded-3xl border border-[#E3EDE3]">
+                    <h3 class="font-bold text-2xl mb-6">Current Reality vs. KrshiVision</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-xl border-l-4 border-red-500 shadow-sm">
+                            <p class="text-xs font-bold text-red-500 uppercase mb-1">Traditional Method</p>
+                            <p class="font-medium italic">"Mandi A is giving ₹15. I'll go there."</p>
+                            <p class="text-xs text-gray-500 mt-2">Ignores: ₹4/kg transport, 2% loss, and ₹1/kg fee.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border-l-4 border-[#1E9B63] shadow-sm">
+                            <p class="text-xs font-bold text-[#1E9B63] uppercase mb-1">KrshiVision Intelligence</p>
+                            <p class="font-medium italic">"Mandi A net is ₹9.6. Mandi B net is ₹11.2. WAIT 2 days for ₹13."</p>
+                            <p class="text-xs text-gray-500 mt-2">Includes: NRV calculation and price forecasting.</p>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-gray-400 mt-6 uppercase tracking-widest text-center">* Data figures sourced from SIH project presentation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo (Simulator) -->
+    <section id="demo" class="py-24 px-6 bg-[#17221D] text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold font-['Space_Grotesk'] mb-4">Farm-to-Market Intelligence <span class="text-[#C8F169]">Simulator</span></h2>
+                <p class="text-white/60">Test the intelligence engine. Enter your harvest details to see the Net Realizable Value (NRV) calculation.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Input Panel -->
+                <div class="lg:col-span-1 bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <h4 class="text-[#C8F169] font-bold uppercase text-xs tracking-widest mb-6">Market Inputs</h4>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-white/50 mb-2 uppercase">Select Crop</label>
+                            <select id="cropSelect" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#C8F169]">
+                                <option value="tomatoes" selected>Tomatoes (100 kg Case)</option>
+                                <option value="onions">Onions (500 kg Case)</option>
+                                <option value="potatoes">Potatoes (1000 kg Case)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-white/50 mb-2 uppercase">Quantity (kg)</label>
+                                <input type="number" id="qty" value="100" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#C8F169]">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-white/50 mb-2 uppercase">Local Price (₹/kg)</label>
+                                <input type="number" id="localPrice" value="15" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#C8F169]">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-white/50 mb-2 uppercase">Alternative Market Price (₹/kg)</label>
+                            <input type="number" id="altPrice" value="20" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#C8F169]">
+                        </div>
+
+                        <div class="p-4 bg-[#C8F169]/5 rounded-2xl border border-[#C8F169]/20">
+                            <h5 class="text-[10px] font-bold text-[#C8F169] uppercase mb-3">Estimated Costs</h5>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span>Transport Cost (Total)</span>
+                                        <span id="transVal">₹350</span>
+                                    </div>
+                                    <input type="range" id="transInput" min="0" max="1000" value="350" class="w-full accent-[#C8F169]">
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span>Fees & Handling</span>
+                                        <span id="feesVal">₹120</span>
+                                    </div>
+                                    <input type="range" id="feesInput" min="0" max="500" value="120" class="w-full accent-[#C8F169]">
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1">
+                                        <span>Time/Spoilage Risk</span>
+                                        <span id="spoilVal">₹80</span>
+                                    </div>
+                                    <input type="range" id="spoilInput" min="0" max="500" value="80" class="w-full accent-[#C8F169]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="calculateNRV()" class="w-full bg-[#C8F169] text-[#12372A] py-4 rounded-xl font-black uppercase tracking-widest hover:brightness-110 transition">Analyse Market</button>
+                        <button onclick="loadSampleScenario()" class="w-full text-white/40 text-xs font-bold uppercase hover:text-white transition">Load Sample SIH Scenario</button>
+                    </div>
+                </div>
+
+                <!-- Results Panel -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div id="resultCard" class="bg-white text-[#17221D] p-8 rounded-3xl relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-8">Recommendation</h4>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                <div>
+                                    <h2 id="recText" class="text-5xl font-black italic text-[#12372A] mb-2">NEGOTIATE</h2>
+                                    <p id="recDesc" class="text-gray-500 max-w-sm">The net advantage of the alternative market is marginal. Negotiate a better price locally or wait for forecast trends.</p>
+                                </div>
+                                <div class="bg-[#F8F7F0] p-6 rounded-2xl text-center border border-gray-100 min-w-[200px]">
+                                    <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Net Gain/Loss</p>
+                                    <p id="netDiff" class="text-3xl font-bold text-orange-500">-₹50</p>
+                                    <p class="text-[10px] text-gray-400 mt-2 italic">Relative to Local Sale</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                            <h4 class="text-white/50 font-bold uppercase text-[10px] tracking-widest mb-6">Value Comparison</h4>
+                            <div class="h-48">
+                                <canvas id="comparisonChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                            <h4 class="text-white/50 font-bold uppercase text-[10px] tracking-widest mb-6">Net Realizable Value Flow</h4>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-white/60">Gross Value</span>
+                                    <span id="grossVal" class="font-bold">₹2,000</span>
+                                </div>
+                                <div class="h-px bg-white/10 w-full"></div>
+                                <div class="flex justify-between items-center text-sm text-red-400">
+                                    <span>(-) Logistics</span>
+                                    <span id="logVal">-₹350</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm text-red-400">
+                                    <span>(-) Fees/Loss</span>
+                                    <span id="lossVal">-₹200</span>
+                                </div>
+                                <div class="h-px bg-white/10 w-full"></div>
+                                <div class="flex justify-between items-center text-xl font-bold text-[#C8F169]">
+                                    <span>Net NRV</span>
+                                    <span id="nrvFinal">₹1,450</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="technology" class="py-24 px-6 bg-[#F8F7F0]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold font-['Space_Grotesk'] mb-6">Behind Every Recommendation Is a <br><span class="text-[#1E9B63]">Transparent Intelligence Pipeline</span></h2>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-4">
+                <div class="bg-white p-6 rounded-2xl border border-[#E3EDE3] shadow-sm hover:shadow-md transition cursor-pointer group">
+                    <div class="w-10 h-10 bg-[#12372A] rounded-lg mb-4 flex items-center justify-center text-white group-hover:scale-110 transition">01</div>
+                    <h5 class="font-bold mb-2">Input Layer</h5>
+                    <p class="text-xs text-gray-500">Multilingual App, USSD, and Voice-guided inputs for farmers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-[#E3EDE3] shadow-sm hover:shadow-md transition cursor-pointer group">
+                    <div class="w-10 h-10 bg-[#1E9B63] rounded-lg mb-4 flex items-center justify-center text-white group-hover:scale-110 transition">02</div>
+                    <h5 class="font-bold mb-2">Data Layer</h5>
+                    <p class="text-xs text-gray-500">eNAM, Agmarknet, Weather APIs, and Fuel rates.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-[#E3EDE3] shadow-sm hover:shadow-md transition cursor-pointer group">
+                    <div class="w-10 h-10 bg-[#C8F169] rounded-lg mb-4 flex items-center justify-center text-[#12372A] font-bold group-hover:scale-110 transition">03</div>
+                    <h5 class="font-bold mb-2">AI Engine</h5>
+                    <p class="text-xs text-gray-500">Prophet/LSTM forecasting and NRV calculations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-[#E3EDE3] shadow-sm hover:shadow-md transition cursor-pointer group">
+                    <div class="w-10 h-10 bg-[#1E9B63] rounded-lg mb-4 flex items-center justify-center text-white group-hover:scale-110 transition">04</div>
+                    <h5 class="font-bold mb-2">Decision Layer</h5>
+                    <p class="text-xs text-gray-500">SELL / WAIT / NEGOTIATE logic with confidence scores.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-[#E3EDE3] shadow-sm hover:shadow-md transition cursor-pointer group">
+                    <div class="w-10 h-10 bg-[#12372A] rounded-lg mb-4 flex items-center justify-center text-white group-hover:scale-110 transition">05</div>
+                    <h5 class="font-bold mb-2">Output Layer</h5>
+                    <p class="text-xs text-gray-500">Visual recommendations, cost breakdown, and market list.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Proposed Technology Stack</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-white rounded-xl border border-[#E3EDE3]">
+                            <h6 class="text-[10px] font-bold text-gray-400 uppercase mb-2">Frontend</h6>
+                            <p class="text-sm font-medium">React / Tailwind / Flutter</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-[#E3EDE3]">
+                            <h6 class="text-[10px] font-bold text-gray-400 uppercase mb-2">Intelligence</h6>
+                            <p class="text-sm font-medium">Python / Scikit-learn / Prophet</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-[#E3EDE3]">
+                            <h6 class="text-[10px] font-bold text-gray-400 uppercase mb-2">Backend</h6>
+                            <p class="text-sm font-medium">Node.js / PostgreSQL</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl border border-[#E3EDE3]">
+                            <h6 class="text-[10px] font-bold text-gray-400 uppercase mb-2">Cloud</h6>
+                            <p class="text-sm font-medium">AWS / Scheduled Data Sync</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#12372A] text-white p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4">NRV Equation</h3>
+                    <div class="font-['Space_Grotesk'] text-2xl leading-relaxed mb-6">
+                        <span class="text-[#C8F169]">NRV</span> = Expected Price − Transport − Fees − Risk
+                    </div>
+                    <p class="text-white/60 text-sm">Our platform turns raw market volatility into a stable net realizable value, allowing farmers to compare apples-to-apples across different geographic mandis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-bold font-['Space_Grotesk'] mb-4">Four Minds. One Mission.</h2>
+                    <p class="text-gray-500">The team behind KrshiVision at Smart India Hackathon.</p>
+                </div>
+                <div class="text-6xl font-black text-[#12372A]/5 font-['Space_Grotesk'] hidden md:block">KRSHIVISION</div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="group">
+                    <div class="aspect-square bg-[#F8F7F0] rounded-3xl flex items-center justify-center text-4xl font-bold text-[#12372A] border border-[#E3EDE3] group-hover:bg-[#12372A] group-hover:text-white transition-all duration-500">YG</div>
+                    <div class="mt-6">
+                        <h4 class="font-bold text-lg">Yashwanth Gowda B M</h4>
+                        <p class="text-sm text-[#1E9B63] font-medium">Core Intelligence</p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="group">
+                    <div class="aspect-square bg-[#F8F7F0] rounded-3xl flex items-center justify-center text-4xl font-bold text-[#12372A] border border-[#E3EDE3] group-hover:bg-[#12372A] group-hover:text-white transition-all duration-500">VK</div>
+                    <div class="mt-6">
+                        <h4 class="font-bold text-lg">Vishal Karthik A N</h4>
+                        <p class="text-sm text-[#1E9B63] font-medium">Architecture & UI</p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="group">
+                    <div class="aspect-square bg-[#F8F7F0] rounded-3xl flex items-center justify-center text-4xl font-bold text-[#12372A] border border-[#E3EDE3] group-hover:bg-[#12372A] group-hover:text-white transition-all duration-500">TS</div>
+                    <div class="mt-6">
+                        <h4 class="font-bold text-lg">Tarun S</h4>
+                        <p class="text-sm text-[#1E9B63] font-medium">Data Pipeline</p>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="group">
+                    <div class="aspect-square bg-[#F8F7F0] rounded-3xl flex items-center justify-center text-4xl font-bold text-[#12372A] border border-[#E3EDE3] group-hover:bg-[#12372A] group-hover:text-white transition-all duration-500">SH</div>
+                    <div class="mt-6">
+                        <h4 class="font-bold text-lg">Sumukh Gajanana Hegde</h4>
+                        <p class="text-sm text-[#1E9B63] font-medium">Product Strategy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Footer -->
+    <footer class="bg-[#12372A] text-white pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold font-['Space_Grotesk'] mb-8">Let Every Harvest Find <br><span class="text-[#C8F169]">Its True Value.</span></h2>
+                <a href="#demo" class="inline-block bg-[#C8F169] text-[#12372A] px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition transform">Predict. Price. Prosper.</a>
+            </div>
+
+            <hr class="border-white/10 mb-12">
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <div class="text-2xl font-bold font-['Space_Grotesk'] mb-2">Krshi<span class="text-[#C8F169]">Vision</span></div>
+                    <p class="text-white/40 text-xs">Farm-to-Market Price Intelligence · SIH Project</p>
+                </div>
+                <div class="flex gap-8 text-xs font-bold uppercase tracking-tighter text-white/60">
+                    <a href="#home" class="hover:text-white transition">Home</a>
+                    <a href="#demo" class="hover:text-white transition">Demo</a>
+                    <a href="#technology" class="hover:text-white transition">Stack</a>
+                    <a href="#team" class="hover:text-white transition">Team</a>
+                </div>
+                <div class="text-xs text-white/30">
+                    &copy; 2026 KrshiVision. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
